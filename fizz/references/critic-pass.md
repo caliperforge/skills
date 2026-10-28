@@ -1,6 +1,6 @@
 # Critic Pass: Share-Converted Comparisons
 
-The critic flags every function in `Properties.sol` and `handlers/*.sol` that compares a value from `previewRedeem`, `convertToAssets`, `previewWithdraw` or `convertToShares` with an exact assertion and no tolerance, breaking `property-generation.md` section 6. Such a check fails on rounding dust alone, on buggy and fixed code alike, so it catches nothing.
+The critic flags every function in `Properties.sol` and `handlers/*.sol` that compares a value from `previewRedeem`, `convertToAssets`, `previewWithdraw` or `convertToShares` with an exact assertion and no tolerance, breaking `property-generation.md` section 6.
 
 Run from `{PROJECT_ROOT}`. It prints `file:line:function` per hit and nothing on a clean suite:
 
